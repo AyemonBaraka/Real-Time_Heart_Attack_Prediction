@@ -42,16 +42,11 @@ feature_cols = df.columns
 feature_cols.remove('label')
 lr = LogisticRegression(maxIter=10, regParam= 0.01)
 
-# We create a one hot encoder.
-#ohe = OneHotEncoder(inputCols = ['sex', 'cp', 'fbs', 'restecg', 'slp', 'exng', 'caa', 'thall'], outputCols=['sex_ohe', 'cp_ohe', 'fbs_ohe', 'restecg_ohe', 'slp_ohe', 'exng_ohe', 'caa_ohe', 'thall_ohe'])
-# Input list for scaling
+
 inputs = ['age','trtbps','chol','thalachh','oldpeak']
 
-# We scale our inputs
 assembler1 = VectorAssembler(inputCols=inputs, outputCol="features_scaled1")
 scaler = MinMaxScaler(inputCol="features_scaled1", outputCol="features_scaled")
-# We create a second assembler for the encoded columns.
-#assembler2 = VectorAssembler(inputCols=['sex_ohe', 'cp_ohe', 'fbs_ohe', 'restecg_ohe', 'slp_ohe', 'exng_ohe', 'caa_ohe', 'thall_ohe','features_scaled'], outputCol="features")
 assembler2 = VectorAssembler(inputCols=['features_scaled'], outputCol="features")
 
 # Create stages list
