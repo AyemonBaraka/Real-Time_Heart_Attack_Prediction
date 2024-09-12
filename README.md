@@ -38,12 +38,16 @@ In the dataset
 * Logistic Regression has been used for binary classification with following parameters:
   * maxIter = 1
   * regParam = 0.1
-* Accuracy of the model is 79.59%
-  
+* **Accuracy of the model is 79.59%**
+
+confusion matrix and the accuracy result from console given below:
+
 ![image](https://github.com/user-attachments/assets/2d9ad6d5-8a4a-4318-a7a4-addabd9c0f30)
 
 
 # Real-Time Prediction
+
+The snapshot of Real time prediction result from console is attached below:
 
 ![image](https://github.com/user-attachments/assets/c18f1747-8835-4859-86fe-90e82851c4c1)
 
