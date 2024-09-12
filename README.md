@@ -39,6 +39,7 @@ In the dataset
   * maxIter = 1
   * regParam = 0.1
 * Accuracy of the model is 79.59%
+  
 ![image](https://github.com/user-attachments/assets/2d9ad6d5-8a4a-4318-a7a4-addabd9c0f30)
 
 
